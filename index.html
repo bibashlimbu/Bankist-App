@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- font awesomeLink -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- login -->
+    <header>
+      <h3 class="info">Login to get started</h3>
+      <img src="img/logo.png" alt="logo" />
+      <div class="user-login">
+        <input type="text" placeholder="user" class="user-name" />
+        <input type="text" placeholder="PIN" class="user-pin" />
+        <button><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </header>
+    <!-- login ends -->
+
+    <!-- Account-details -->
+    <section class="wrapper">
+      <div class="acc-details">
+        <div class="current-balance">
+          <div class="login-date">
+            <h3>Current Balance</h3>
+            <p class="date-time">As of <span></span></p>
+          </div>
+          <div class="balance">000</div>
+        </div>
+
+        <div class="transcation"></div>
+
+        <div class="summary">
+          <div class="cash-in">IN <span>000</span></div>
+          <div class="cash-out">OUT <span>000</span></div>
+          <div class="cash-interest">INTEREST <span>000</span></div>
+
+          <button>sort<i class="fa-solid fa-arrow-down-long"></i></button>
+        </div>
+
+        <div class="opration-transfer">
+          <h3>Transfer Money</h3>
+          <form action="">
+            <input type="text" id="transfer" />
+            <input type="text" id="transfer-money" />
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+            <label for="transfer">Transfer to</label>
+            <label for="transfer-money">Amount</label>
+          </form>
+        </div>
+        <div class="opration-loan">
+          <h3>Request Loan</h3>
+          <form action="">
+            <input type="text" id="loan-amount" />
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+            <label for="loan-amount">Amount</label>
+          </form>
+        </div>
+        <div class="close-account">
+          <h3>Close Account</h3>
+          <form action="">
+            <input type="text" id="user" />
+            <input type="password" id="pin" />
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+            <label for="user">Confirm User</label>
+            <label for="pin">Confirm PIN</label>
+          </form>
+        </div>
+        <div class="logout-timer">
+          You will be logged out in&nbsp;<span></span>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="js/script.js"></script>
+</html>

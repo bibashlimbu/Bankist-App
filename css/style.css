@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* login */
+header {
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+header img {
+  width: 52px;
+}
+
+.user-login {
+  display: flex;
+  gap: 15px;
+}
+
+.user-login .user-name,
+.user-login .user-pin {
+  width: 110px;
+  height: 35px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 15px;
+  border: #333333;
+  font-size: 1.1rem;
+}
+
+.user-login .user-name:focus,
+.user-login .user-pin :focus,
+.opration-transfer form input:focus,
+.opration-loan form input:focus,
+.close-account form input:focus {
+  outline: none;
+  border: 1px solid #333333;
+}
+
+header button {
+  width: 40px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #333333;
+}
+
+header button:hover i {
+  color: #f3f3f3;
+}
+
+/* account details */
+.wrapper {
+  width: 100%;
+}
+
+.acc-details {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 1.3rem;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 20px;
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.current-balance {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / span 2;
+}
+
+.login-date h3 {
+  color: #333333;
+  font-size: 1.5rem;
+}
+
+.login-date p {
+  opacity: 0.6;
+}
+
+.balance {
+  font-size: 3rem;
+}
+
+.transcation {
+  height: 32.25rem;
+  background-color: #fff;
+  grid-row: 2 / span 3;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.transcation-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.transcation-row .deposite,
+.transcation-row .withdraw {
+  width: 75px;
+  color: #fff;
+  background: linear-gradient(to top left, #39b385, #9be15d);
+  text-align: center;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.transcation-row .withdraw {
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  grid-row: 5 / 6;
+}
+
+.summary .cash-in span,
+.summary .cash-interest span,
+.summary .cash-out span {
+  color: #39b385;
+  font-size: 1.5em;
+}
+
+.summary .cash-out span {
+  color: #e52a5a;
+}
+
+.summary button {
+  width: 55px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.summary button:hover,
+.opration-transfer form button:hover,
+.opration-loan form button:hover,
+.close-account form button:hover {
+  color: #fff;
+  background-color: #333333;
+}
+
+.opration-transfer,
+.opration-loan,
+.close-account {
+  padding: 30px;
+  background: linear-gradient(to top left, #ffb003, #ffcb03);
+  border-radius: 10px;
+}
+
+.opration-transfer form,
+.opration-loan form,
+.close-account form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.opration-transfer h3,
+.opration-loan h3,
+.close-account h3 {
+  margin-bottom: 1.5rem;
+}
+
+.opration-transfer form input,
+.opration-loan form input,
+.close-account input {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.opration-transfer form button,
+.opration-loan form button,
+.close-account form button {
+  cursor: pointer;
+  width: 50px;
+}
+
+.opration-transfer form label,
+.opration-loan form label,
+.close-account form label {
+  text-align: center;
+}
+
+.opration-loan {
+  background: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.opration-loan form {
+  grid-template-columns: 1fr 2fr;
+}
+
+.close-account {
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.logout-timer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* responsive */
+@media screen and (max-width: 1000px) {
+  .transcation,
+  .summary,
+  .opration-transfer,
+  .opration-loan,
+  .close-account,
+  .logout-timer {
+    grid-column: 1 / 3;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .balance {
+    font-size: 1.8rem;
+  }
+
+  .summary .cash-in span,
+  .summary .cash-interest span,
+  .summary .cash-out span {
+    font-size: 1rem;
+  }
+}
